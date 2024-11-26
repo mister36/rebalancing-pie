@@ -1,0 +1,25 @@
+[package]
+name = "rebalancing"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "rebalancing"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build"]
+
+[dependencies]
+anchor-lang = "0.29.0"
+anchor-spl = "0.29.0"
+solana-program = "=1.16.25"
+spl-token = "4.0"
+spl-associated-token-account = "2.0"
+amm-anchor = { git = "https://github.com/raydium-io/raydium-cpi-example", package = "amm-cpi"}
